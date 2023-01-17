@@ -1,0 +1,68 @@
+.container {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 64px;
+    width: 100%;
+    padding: 0px 150px 0px 150px;
+    backdrop-filter: blur(30px);
+}
+
+.header {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu{
+    cursor: pointer;
+    height: 14px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ione {
+    display: inline-block;
+    height: 3px;
+    border-radius: 10px;
+    width: 30px;
+    background-color: rgb(46, 46, 46);
+}
+
+.itwo {
+    display: inline-block;
+    height: 3px;
+    border-radius: 10px;
+    width: 30px;
+    background-color: rgb(46, 46, 46);
+}
+
+.space {
+    width: 40px;
+}
+
+.input {
+    position: absolute;
+    padding: 10px 33px;
+    width: 270px;
+    right: 0px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.274) ;
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: black;
+}

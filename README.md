@@ -1,6 +1,13 @@
 # Website de loja de carro.
 
-__Colocando em prática conhecimentos de Reactjs, Css...
+__Colocando em prática conhecimentos de desenvolvedor FrontEnd.
+
+__Ferramentas utilizadas neste projeto:
+Photoshop,
+CorelDraw,
+ReactJS,
+React Router,
+ChatGPT
 
 Carro que será usado foi criado pelo artista Brasileiro Robert Design.
 Redes sociais do artista:
