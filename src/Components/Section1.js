@@ -16,6 +16,10 @@ export default function Section1 (){
                 <div className={styles.car}>
                     <Link to='/' className={styles.explorer}>Ver o modelo</Link>
                 </div>
+                <div className={styles.scroll}>
+                    <i className={styles.scrollt}></i>
+                    <i className={styles.scrolld}></i>
+                </div>
             </div>
         </>
     )
