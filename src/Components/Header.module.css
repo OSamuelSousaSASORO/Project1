@@ -66,3 +66,15 @@
 input::placeholder {
     color: black;
 }
+
+@media (max-width: 1003px){
+  .input {
+    display: none;
+  }
+  .space{
+    display: none;
+  }
+  i {
+    display: none;
+  }
+}
