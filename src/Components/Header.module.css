@@ -55,7 +55,7 @@
 .input {
     position: absolute;
     padding: 10px 33px;
-    width: 270px;
+    width: 283px;
     right: 0px;
     outline: 0;
     border: none;
@@ -67,14 +67,107 @@ input::placeholder {
     color: black;
 }
 
-@media (max-width: 1003px){
-  .input {
-    display: none;
-  }
-  .space{
-    display: none;
-  }
-  i {
-    display: none;
-  }
+.menuHidden {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    transition: 0.75s;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+
+.space {
+    width: 100%;
+    height: 100%;
+}
+
+.hiddenBox{
+    height: 100%;
+    width: 400px;
+    background-color: rgba(2, 2, 2, 0.747);
+    backdrop-filter: blur(20px);
+    box-shadow: 7px 0px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.first i {
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    color: orange;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+.first button, .secound button{
+    display: block;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    left: -150px;
+}
+
+.first button:nth-child(1){
+    transition: 1.4s;
+}
+.first button:nth-child(2){
+    transition: 1.5s;
+}
+.first button:nth-child(3){
+    transition: 1.6s;
+}
+.first button:nth-child(4){
+    transition: 1.7s;
+}
+.first button:nth-child(5){
+    transition: 1.8s;
+}
+.first button:nth-child(6){
+    transition: 1.9s;
+}
+.first button:nth-child(7){
+    transition: 2s;
+}
+.first button:nth-child(8){
+    transition: 2.1s;
+}
+
+.first button:hover{
+    border-bottom: 1px solid orange;
+    transition: 0s;
+}
+
+.secound button {
+    left: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.secound button:hover {
+    border-bottom: 1px solid orange;
+}
+
+.ourmodels{
+    transition: 0.1s;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    padding: 5px 0px;
+    transition: 0.1s;
+}
+
+.ourmodels:hover {
+    border-bottom: 1px solid orange;
 }
