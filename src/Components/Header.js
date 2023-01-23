@@ -12,6 +12,8 @@ export default function Header(){
     const button5 = useRef()
     const button6 = useRef()
     const button7 = useRef()
+    const button8 = useRef()
+    const button9 = useRef()
     const menuHidden = useRef()
     const close = useRef()
     const menuScreenVisible = useRef()
@@ -25,6 +27,8 @@ export default function Header(){
         button5.current.style.left = '0px';
         button6.current.style.left = '0px';
         button7.current.style.left = '0px';
+        button8.current.style.left = '0px';
+        button9.current.style.left = '0px';
     }
 
     function hiddenOBJ(){
@@ -36,6 +40,8 @@ export default function Header(){
         button5.current.style.left = '-150px';
         button6.current.style.left = '-150px';
         button7.current.style.left = '-150px';
+        button8.current.style.left = '-150px';
+        button9.current.style.left = '-150px';
     }
 
     function menuHiddenVisible(){
@@ -73,8 +79,8 @@ export default function Header(){
                         <button ref={button7}>A empresa FK</button>
                     </div>
                     <div className={styles.secound}>
-                        <button>Estoque</button>
-                        <button>Encontre uma concessionária</button>
+                        <button ref={button8}>Estoque</button>
+                        <button ref={button9}>Encontre uma concessionária</button>
                     </div>
                 </div>
                 <div className={styles.space} ref={menuScreenVisible}></div>

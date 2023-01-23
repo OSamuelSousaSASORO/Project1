@@ -3,8 +3,12 @@ import styles from './Section1.module.css'
 
 export default function Section1 (){
 
+    const container = useRef()
     const container2 = useRef()
-
+    const container3 = useRef()
+    const container4 = useRef()
+    const borderIcon = useRef()
+    
     useEffect(()=>{
         const observer = new IntersectionObserver((entry)=>{
             console.log(entry)
@@ -16,12 +20,25 @@ export default function Section1 (){
         container2.current.scrollIntoView({behavior: "smooth"})
     }
 
+    function firstIcon(position, object){
+        borderIcon.current.style.top = position + 'px';
+        object.current.scrollIntoView({behavior: "smooth"})
+    }
+
     return(
         <>
-            <div className={styles.container}>
+            <span className={styles.initPage} ref={container}></span>
+            <section className={styles.container}>
                 <div className={styles.nurb}></div>
                 <div className={styles.title}></div>
                 <div className={styles.carAndDescription}>
+                    <span>
+                        <i className={styles.borderIcons} ref={borderIcon}></i>
+                        <i className={styles.iconsForScreen} onClick={()=> firstIcon(-3, container)}></i>
+                        <i className={styles.iconsForScreen} onClick={()=>firstIcon(27, container2)}></i>
+                        <i className={styles.iconsForScreen} onClick={()=>firstIcon(57, container3)}></i>
+                        <i className={styles.iconsForScreen} onClick={()=>firstIcon(87, container4)}></i>
+                    </span>
                     <div className={styles.car}></div>
                     <div className={styles.boxdescription}>
                         <div className={styles.description}>
@@ -39,8 +56,8 @@ export default function Section1 (){
                     <i className={styles.scrollt}></i>
                     <i className={styles.scrolld}></i>
                 </div>
-            </div>
-            <div className={styles.container2}>
+            </section>
+            <section className={styles.container2}>
                 <div className={styles.car2}></div>
                 <div className={styles.description2}>
                     <h1>Desempenho máximizado</h1>
@@ -66,7 +83,17 @@ export default function Section1 (){
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <span className={styles.setScrollForContainer3} ref={container3}></span>
+            <section className={styles.container3}>
+                <div className={styles.car3}>
+                </div>
+            </section>
+            <section className={styles.container4} ref={container4}>
+                <div>asdsd</div>
+            </section>
+            <section className={styles.container5}>
+            </section>
         </>
     )
 }

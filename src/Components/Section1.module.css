@@ -1,7 +1,16 @@
-.container, .container2 {
+.initPage{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: -54px;
+    display: inline-block;
+}
+
+.container, .container2, .container3, .container4 {
     height: calc(100vh - 64px);
     width: 100%;
     background-color: #f9f9f8;
+    background: radial-gradient(transparent, transparent, rgba(0, 0, 0, 0.1));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +24,7 @@
     position: absolute;
     background-image: url('../Photo/nurb.png');
     background-position: center;
-    background-size: 100%;
+    background-size: 80%;
     background-repeat: no-repeat;
     height: calc(100vh - 64px);
     width: 100%;
@@ -43,6 +52,40 @@
     height: 550px;
 }
 
+.carAndDescription span {
+    z-index: 1;
+    position: fixed;
+    right: 30px;
+    height: 100px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.iconsForScreen{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: invert(100%);
+    cursor: pointer;
+}
+
+.borderIcons {
+    top: -3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    backdrop-filter: invert(100%);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 15px;
+    z-index: -1;
+    transition: 0.2s ease-in-out;
+}
+
 .car {
     background-image: url('../Photo/car2.png');
     background-size: 100%;
@@ -65,16 +108,18 @@
     position: relative;
     padding: 30px;
     width: 450px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
     font-weight: 600;
     line-height: 1.4rem;
     box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.438);
+    box-shadow: -10px 10px 1px orange;
+    border: 1px solid  rgba(0, 0, 0, 0.2);
 }
 
 .boxbuttons {
     position: relative;
-    bottom: -15px;
+    bottom: -25px;
     width: 430px;
     display: flex;
     justify-content: space-around;
@@ -181,7 +226,7 @@
     box-shadow: 10px 10px 1px orange;
 }
 
-.car2, .car3 {
+.car2 {
     background-image: url('../Photo//car3.png');
     background-size: 500px;
     background-repeat: no-repeat;
@@ -229,6 +274,45 @@
 .times div {
     display: inline-block;
     margin-right: 40px;
+}
+
+.setScrollForContainer3 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    display: inline-block;
+    top: calc(200vh - 128px);
+}
+
+.container3 {
+    width: 100%;
+    padding: 0px 150px;
+}
+
+.car3 {
+    background-image: url('../Photo//car5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: initial;
+    height: 700px;
+    width: 100%;
+    border-image: linear-gradient(0deg, transparent, transparent, transparent, orange, black) 10;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.container4{
+    height: 50vh;
+    border-image: linear-gradient(180deg, transparent, transparent, transparent, rgba(255, 166, 0, 1), rgba(0, 0, 0, 1)) 10;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.container5{
+    background-color: black;
+    height: 50vh;
+    border-width: 3px;
+    border-style: solid;
 }
 
 @keyframes scrolld {
