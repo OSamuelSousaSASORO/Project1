@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './Section1.module.css'
+import imginstagram from '../Photo/instagram.png'
+import imgemail from '../Photo/email.png'
+import imggithub from '../Photo/github.png'
+import imgfacebook from '../Photo/facebook.png'
 
 export default function Section1 (){
 
@@ -7,12 +11,18 @@ export default function Section1 (){
     const container2 = useRef()
     const container3 = useRef()
     const container4 = useRef()
+    const card1 = useRef()
+    const card2 = useRef()
+    const card3 = useRef()
     const borderIcon = useRef()
     
     useEffect(()=>{
         const observer = new IntersectionObserver((entry)=>{
-            console.log(entry)
+            console.log(entry.isVisible)
+            console.log(entry.isIntersecting)
+            console.log(entry.intersectionRatio)
         })
+
         observer.observe(container2.current)
     }, [])
 
@@ -23,6 +33,26 @@ export default function Section1 (){
     function firstIcon(position, object){
         borderIcon.current.style.top = position + 'px';
         object.current.scrollIntoView({behavior: "smooth"})
+    }
+
+    function clickForCards(card){
+        if (card === 'fcard'){
+            card2.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card3.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card1.current.style.border = '2px solid orange'
+        }
+
+        if (card === 'mcard'){
+            card1.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card3.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card2.current.style.border = '2px solid orange'
+        }
+
+        if (card === 'bcard'){
+            card1.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card2.current.style.border = '2px solid rgb(0, 0, 0, 0.2)'
+            card3.current.style.border = '2px solid orange'
+        }
     }
 
     return(
@@ -89,10 +119,87 @@ export default function Section1 (){
                 <div className={styles.car3}>
                 </div>
             </section>
-            <section className={styles.container4} ref={container4}>
-                <div>asdsd</div>
+            <small className={styles.scrolladjusted} ref={container4}></small>
+            <section className={styles.container4}>
+                <h1>Está pronto para criar momentos incríveis?</h1>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Na FK Motors, não acreditamos num tamanho único. Por isso, criamos três níveis diferentes de equipamento concebidos para refletir a sua identidade e a forma como o utiliza.</p>
+                <div className={styles.boxcards}>
+                    <div className={styles.cards} onClick={()=> clickForCards('fcard')} ref={card1}>
+                        <h4>Basic</h4>
+                        <small>R$ 75.900</small>
+                        <ul>
+                            <li>Motor</li>
+                            <li>Automático</li>
+                            <li>243 hp</li>
+                            <li>0 a 100 km/h em 4,3 s</li>
+                            <li>Flex</li>
+                        </ul>
+                        <button className={styles.configure}>Configurar</button>
+                    </div>
+                    <div className={styles.cards} onClick={()=> clickForCards('mcard')} ref={card2}>
+                        <h4>Plus</h4>
+                        <small>R$ 149.900</small>
+                        <ul>
+                            <li>Motor</li>
+                            <li>Automático</li>
+                            <li>412 hp</li>
+                            <li>0 a 100 km/h em 3,8 s</li>
+                            <li>Gasolina</li>
+                        </ul>
+                        <button className={styles.configure}>Configurar</button>
+                    </div>
+                    <div className={styles.cards} onClick={()=> clickForCards('bcard')} ref={card3}>
+                        <h4>Performance</h4>
+                        <small>R$ 199.900</small>
+                        <ul>
+                            <li>Motor</li>
+                            <li>Manual</li>
+                            <li>647 hp</li>
+                            <li>0 a 100 km/h em 2,9 s</li>
+                            <li>Gasolina de avião</li>
+                        </ul>
+                        <button className={styles.configure}>Configurar</button>
+                    </div>
+                </div>
             </section>
             <section className={styles.container5}>
+                <div className={styles.box1}>
+                    <div className={styles.firstContainerFooter}>
+                        <div>
+                            <p>Nosso Mundo</p>
+                            <p>Proprietários</p>
+                            <p>Modelos</p>
+                            <p>Estoque</p>
+                            <p>Loja</p>
+                        </div>
+                        <div>
+                            <p>FK Motors</p>
+                            <p>Contato</p>
+                            <p>Corporativo</p>
+                            <p>Carreiras</p>
+                            <p>Investidores</p>
+                        </div>
+                    </div>
+                    <div className={styles.contact}>
+                        <div>
+                            <p>Contato do Desenvolvedor:</p>
+                            <img src={imggithub} alt='' onClick={()=> window.open('https://github.com/OSamuelSousaSASORO','_blank')}></img>
+                            <img src={imgemail} alt='' onClick={()=> window.open("mailto:osamuelsousa@outlook.com?&body=Descobri seu contato atráves de seus projetos.")
+    }></img>
+                        </div>
+                        <div>
+                            <p>Contato do Designer do Carro:</p>
+                            <img src={imginstagram} alt='' onClick={()=> window.open('https://www.instagram.com/rob3rtdesign/','_blank')}></img>
+                            <img src={imgfacebook} alt='' onClick={()=> window.open('https://www.facebook.com/rob3rtdesign/','_blank')}></img>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.finaly}>
+                    <small>Termos e condições</small>
+                    <small>Privacidade</small>
+                    <small>Cookies</small>
+                    <small>A empresa</small>
+                </div>
             </section>
         </>
     )

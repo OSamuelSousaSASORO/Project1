@@ -85,24 +85,6 @@ export default function Header(){
                 </div>
                 <div className={styles.space} ref={menuScreenVisible}></div>
             </div>
-
-            <datalist id="testes">
-                <option value='Caxias do Sul - RS'/>
-                <option value='Porto Alegre - RS'/>
-                <option value='Canela - RS'/>
-                <option value='Gramado - RS'/>
-                <option value='Torres - RS'/>
-                <option value='Curitiba - PR'/>
-                <option value='Londrina - PR'/>
-                <option value='Maringá - PR'/>
-                <option value='São José dos Pinhais - PR'/>
-                <option value='Cascavel - PR'/>
-                <option value='Florianópolis - SC'/>
-                <option value='Blumenau - SC'/>
-                <option value='Joinville - SC'/>
-                <option value='Balneário - SC'/>
-                <option value='São José - SC'/>
-            </datalist>
         </>
     )
 }

@@ -39,7 +39,7 @@
     background-repeat: no-repeat;
     transform: rotate(-5deg);
     height: 150px;
-    width: 1400px;
+    width: 730px;
     top: 120px;
     animation: fordka 15s infinite;
 }
@@ -133,7 +133,7 @@
     scroll-behavior: smooth;
 }
 
-.viewcar::after, .buildyourcar::after{
+.viewcar::after, .buildyourcar::after, .configure::after{
     content: '';
     display: inline-block;
     width: 30px;
@@ -148,7 +148,7 @@
     transition: 0.25s ease-in-out;
 }
 
-.viewcar:hover::after, .buildyourcar:hover::after{
+.viewcar:hover::after, .buildyourcar:hover::after, .configure:hover::after{
     margin-left: 15px;
 }
 
@@ -291,9 +291,9 @@
 
 .car3 {
     background-image: url('../Photo//car5.png');
-    background-size: cover;
+    background-size: 1300px;
     background-repeat: no-repeat;
-    background-position: initial;
+    background-position: center;
     height: 700px;
     width: 100%;
     border-image: linear-gradient(0deg, transparent, transparent, transparent, orange, black) 10;
@@ -302,10 +302,100 @@
 }
 
 .container4{
-    height: 50vh;
+    padding: 0px 150px 100px 150px;
+    height: auto;
     border-image: linear-gradient(180deg, transparent, transparent, transparent, rgba(255, 166, 0, 1), rgba(0, 0, 0, 1)) 10;
     border-width: 3px;
     border-style: solid;
+}
+
+.container4 h1 {
+    font-weight: 800;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.container4 p {
+    width: 950px;
+    word-wrap: break-word;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.boxcards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1100px;
+}
+
+.cards {
+    border: 2px solid rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 15px 30px ;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cards:hover {
+    border: 2px solid rgb(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cards h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cards small {
+    font-weight: 400;
+}
+
+.cards ul {
+    width: 100%;
+    word-wrap: break-word;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.cards ul li {
+    list-style-type: circle;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.scrolladjusted{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    position: absolute;
+    top: calc(270vh);
+}
+
+.configure {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+}
+
+.configure:hover {
+    border-bottom: 1px solid orange;
+}
+
+.configure::after {
+    position: absolute;
+    margin-left: 5px;
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
 }
 
 .container5{
@@ -313,6 +403,70 @@
     height: 50vh;
     border-width: 3px;
     border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 150px;
+}
+
+.box1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstContainerFooter {
+    padding: 10px;
+    color: white;
+}
+
+.firstContainerFooter div {
+    display: inline-block;
+    padding: 0px 23px;
+}
+
+.firstContainerFooter div p{
+    margin-top: 5px;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.firstContainerFooter div p:hover{
+    margin-top: 5px;
+    padding: 10px 0px;
+    border-bottom: 1px solid orange;
+}
+
+.contact {
+    color: white;
+}
+
+.contact p {
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.contact div{
+    margin-top: 20px;
+}
+
+.contact img{
+    height: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.finaly small {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 200;
+    cursor: pointer;
+    user-select: none;
 }
 
 @keyframes scrolld {
@@ -350,5 +504,40 @@
         background-image: url('../Photo/fordka.png');
         transform: rotate(-5deg);
         transform: scale(100%);
+    }
+}
+
+@media (width < 1450px) {
+    .car2 {
+        transform: scale(80%);
+        left: 50%;
+    }
+    .times {
+        transform: scale(90%);
+        right: 50%;
+    }
+    .car3 {
+        background-size: 1050px;
+        height: 570px;
+        width: 1050px;
+    }
+}
+
+@media (width < 1290px) {
+    .description3{
+        left: 40%;
+    }
+}
+
+@media (width < 1200px) {
+    .car{
+        transform: scale(80%);
+        min-width: 700px;
+        left: 0px;
+    }
+    .boxdescription {
+        position: absolute;
+        bottom: 250px;
+        right: 100px;
     }
 }
